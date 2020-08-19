@@ -14,7 +14,11 @@
         exit();
     }
 
+    $pass = md5($pass."poijklmn357qsxzse456");
+
     $mysql = new mysqli('localhost', 'root', '', 'regaut'); //  создаем коннект к базе
     $mysql -> query("INSERT INTO `users` (`login`, `pass`, `name`) VALUES('$login', '$pass', '$name')");    //  вставляем значения
 
     $mysql -> close();  //  закрываем
+
+    header('Location: /');  //  возвращаемся на главную
