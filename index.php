@@ -32,7 +32,7 @@
                 </form>
             </div>
         <?php else: ?>
-            <p>Привет <?=$_COOKIE['user']?></p>
+            <p>Привет <?=$_COOKIE['user']?>. Чтобы выйти нажмите <a href="/exit.php">здесь</a>. </p>
         <?php endif;?>
 
         </div>
