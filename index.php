@@ -8,6 +8,11 @@
 </head>
 <body>
     <div class="container mt-4">
+
+        <?php
+            if ($_COOKIE['user'] == ''):
+        ?>
+
         <div class="row">
             <div class="col">
                 <H1>Форма регистрации</H1>
@@ -26,6 +31,10 @@
                     <button class="btn btn-success" type="submit">Авторизоваться</button>
                 </form>
             </div>
+        <?php else: ?>
+            <p>Привет <?=$_COOKIE['user']?></p>
+        <?php endif;?>
+
         </div>
     </div>
 
